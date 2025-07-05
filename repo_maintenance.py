@@ -24,6 +24,23 @@ def log(message: str) -> None:
 def run(command: str) -> subprocess.CompletedProcess:
     """Run a shell command and log its output."""
     log(f"Running: {command}")
+    try:
+        result = subprocess.run(
+            command,
+            shell=True,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            check=True,
+        )
+        log(result.stdout)
+    except subprocess.CalledProcessError as e:
+        log(f"Command failed with return code {e.returncode}")
+        log(e.output)
+        raise
+    return result
+    """Run a shell command and log its output."""
+    log(f"Running: {command}")
     result = subprocess.run(
         command,
         shell=True,
