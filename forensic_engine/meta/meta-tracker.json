@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "timestamp": "2025-07-06T22:48:32.459071+00:00",
+    "action": "file_organized",
+    "details": {
+      "from": "/tmp/pytest-of-root/pytest-5/test_case_organizer0/case_001_audio_0.wav",
+      "to": "/tmp/pytest-of-root/pytest-5/test_case_organizer0/cases/case_001/raw/case_001_0001.wav",
+      "case_id": "case_001"
+    }
+  },
+  {
+    "timestamp": "2025-07-06T22:48:32.459541+00:00",
+    "action": "file_organized",
+    "details": {
+      "from": "/tmp/pytest-of-root/pytest-5/test_case_organizer0/case_001_audio_1.wav",
+      "to": "/tmp/pytest-of-root/pytest-5/test_case_organizer0/cases/case_001/raw/case_001_0002.wav",
+      "case_id": "case_001"
+    }
+  },
+  {
+    "timestamp": "2025-07-06T22:48:32.460083+00:00",
+    "action": "file_organized",
+    "details": {
+      "from": "/tmp/pytest-of-root/pytest-5/test_case_organizer0/case_001_audio_2.wav",
+      "to": "/tmp/pytest-of-root/pytest-5/test_case_organizer0/cases/case_001/raw/case_001_0003.wav",
+      "case_id": "case_001"
+    }
+  },
+  {
+    "timestamp": "2025-07-06T22:48:32.462749+00:00",
+    "action": "file_scanned",
+    "details": {
+      "path": "/tmp/pytest-of-root/pytest-5/test_collect_file_info0/sample.txt"
+    }
+  },
+  {
+    "timestamp": "2025-07-06T22:48:32.465235+00:00",
+    "action": "file_scanned",
+    "details": {
+      "path": "/tmp/pytest-of-root/pytest-5/test_scan_directory0/a.txt"
+    }
+  },
+  {
+    "timestamp": "2025-07-06T22:48:32.471039+00:00",
+    "action": "file_scanned",
+    "details": {
+      "path": "/tmp/pytest-of-root/pytest-5/test_scan_directory_async0/a.txt"
+    }
+  }
+]
