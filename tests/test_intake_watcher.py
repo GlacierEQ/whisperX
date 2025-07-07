@@ -1,20 +1,22 @@
 import sys
 from pathlib import Path
+import pytest
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-import pytest  # noqa: E402
 from forensic_engine import intake_watcher as iw  # noqa: E402
 from forensic_engine.intake_watcher import IntakeWatcher  # noqa: E402
 
 
 def test_is_allowed_file():
+    """Determine whether a filename passes the extension filter."""
     watcher = IntakeWatcher()
     assert watcher.is_allowed_file("test.mp3")
     assert not watcher.is_allowed_file("test.txt")
 
 
 def test_watch_moves_file(tmp_path, monkeypatch):
+    """Move allowed files from intake to processing."""
     intake = tmp_path / "intake"
     processing = tmp_path / "processing"
     intake.mkdir()
