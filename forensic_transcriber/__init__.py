@@ -1,8 +1,7 @@
-"""
-Forensic Transcriber - A comprehensive forensic audio/video transcription and analysis system.
+"""Forensic Transcriber
 
-This module provides tools for processing, transcribing, and analyzing audio/video files
-with forensic integrity, including features like speaker diarization, person identification,
+A toolkit for processing, transcribing, and analyzing audio or video with
+forensic integrity. Features include speaker diarization, person identification
 and comprehensive metadata logging.
 """
 
@@ -19,7 +18,6 @@ from .models.case import Case  # noqa: F401
 import logging
 
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
