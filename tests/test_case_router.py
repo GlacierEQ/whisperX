@@ -7,6 +7,7 @@ from forensic_engine.case_router import CaseRouter  # noqa: E402
 
 
 def test_route_file(tmp_path, monkeypatch):
+    """Route a single file to a case folder."""
     monkeypatch.setattr("forensic_engine.case_router.CASES_DIR", str(tmp_path))
     src = tmp_path / "f.txt"
     src.write_text("d")
@@ -17,6 +18,7 @@ def test_route_file(tmp_path, monkeypatch):
 
 
 def test_route_batch(tmp_path, monkeypatch):
+    """Route multiple files using a mapping."""
     monkeypatch.setattr("forensic_engine.case_router.CASES_DIR", str(tmp_path))
     src1 = tmp_path / "a.txt"
     src2 = tmp_path / "b.txt"

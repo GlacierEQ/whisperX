@@ -10,6 +10,7 @@ from forensic_engine.file_renamer import rename_file  # noqa: E402
 
 
 def test_rename_file(tmp_path):
+    """Rename a file with case and document info."""
     src = tmp_path / "source.txt"
     src.write_text("data")
     new_path = rename_file(
@@ -20,6 +21,7 @@ def test_rename_file(tmp_path):
 
 
 def test_rename_invalid_case(tmp_path):
+    """Raise an error when the case ID is invalid."""
     src = tmp_path / "a.txt"
     src.write_text("x")
     with pytest.raises(ValueError):

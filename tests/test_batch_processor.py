@@ -7,16 +7,19 @@ from forensic_engine.batch_processor import get_case_id, ensure_dir  # noqa: E40
 
 
 def test_get_case_id():
+    """Verify simple case identifier extraction."""
     assert get_case_id("case_001_audio.wav") == "case_001"
     assert get_case_id("no_case.wav") is None
 
 
 def test_ensure_dir(tmp_path):
+    """Ensure directory paths are created."""
     target = tmp_path / "subdir"
     ensure_dir(target)
     assert target.exists()
 
 
 def test_get_case_id_variants():
+    """Extract identifiers from differently formatted filenames."""
     assert get_case_id("foo_case_123.wav") == "case_123"
     assert get_case_id("case999_video.mp4") == "case999"

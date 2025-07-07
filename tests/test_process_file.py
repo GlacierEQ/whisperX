@@ -8,6 +8,7 @@ from forensic_engine.meta import meta_tracker  # noqa: E402
 
 
 def test_process_file(tmp_path, monkeypatch):
+    """Process one queued file end-to-end."""
     processing = tmp_path / "processing"
     processed = tmp_path / "processed"
     cases = tmp_path / "cases"

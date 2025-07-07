@@ -6,7 +6,10 @@ This repository contains a modular forensic processing pipeline built around Whi
 
 - Automated intake watching and batch processing
 - Case routing with per-file folders
+- Evidence ingestion and case building with checksums
 - Basic analytics stubs (summary, legal scan, psychological and sociological analysis)
+- Frequency-based text summarizer utility
+- Public API exports for easier integration
 - Meta tracking for actions and errors
 - Input validation for case identifiers
 
@@ -15,6 +18,8 @@ This repository contains a modular forensic processing pipeline built around Whi
 1. Place files in the `intake/` directory.
 2. Run `python forensic_engine/intake_watcher.py` to monitor incoming files.
 3. Run `python forensic_engine/batch_processor.py` to process queued files.
+4. Use `CaseBuilder` from the package to ingest existing evidence files and
+   generate SHA256 checksums.
 
 All output is organized under `cases/{case_id}/` with subfolders for audio, transcripts, and analysis outputs.
 

@@ -15,6 +15,7 @@ from forensic_engine.config import (
     ENABLE_FLOWCHART,
 )
 from forensic_engine.meta.meta_tracker import log_action
+from forensic_engine.summary_utils import summarize
 
 
 def run_analytics(case_id: str, file_id: str) -> None:
@@ -27,9 +28,14 @@ def run_analytics(case_id: str, file_id: str) -> None:
         )
         return
     if ENABLE_SUMMARY:
+        transcript_path = os.path.join(file_folder, "transcript.txt")
         summary_path = os.path.join(file_folder, "summary.txt")
+        summary_text = ""
+        if os.path.exists(transcript_path):
+            with open(transcript_path, "r") as f:
+                summary_text = summarize(f.read())
         with open(summary_path, "w") as f:
-            f.write(f"[Stub summary for {file_id}]")
+            f.write(summary_text)
         log_action(
             "summary", {"case_id": case_id, "file_id": file_id, "output": summary_path}
         )

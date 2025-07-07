@@ -9,6 +9,7 @@ from forensic_engine.meta import meta_tracker  # noqa: E402
 
 
 def test_run_batch_processor(tmp_path, monkeypatch):
+    """Run the batch processor loop once and move files."""
     processing = tmp_path / "processing"
     processed = tmp_path / "processed"
     cases = tmp_path / "cases"
