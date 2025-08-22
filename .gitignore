@@ -1,3 +1,13 @@
+# Python standard ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+.venv/
+.coverage
+
+# Project-specific ignores
 # Sync .project/sourceTexts/ folder (source text files)
 
 # Don't sync user-specific SQLite databases
@@ -14,3 +24,10 @@ copilot-messages.log
 # System files
 .DS_Store
 .project/attachments/
+
+# Log files
+timeline.log
+
+# Other
+AGENTS.md
+package-lock.json
