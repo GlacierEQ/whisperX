@@ -204,3 +204,93 @@ tests/test_utils.py ...                                                  [100%]
 2025-08-18T12:46:44.674405+00:00 - Outdated dependencies written to outdated_deps.json
 2025-08-18T12:46:44.674461+00:00 - Finished check_outdated
 2025-08-18T12:46:44.675513+00:00 - Maintenance tasks complete
+2025-08-22T05:18:59.655014+00:00 - Starting check_outdated
+2025-08-22T05:18:59.655739+00:00 - Running: pip list --outdated --format=json
+2025-08-22T05:18:59.656455+00:00 - Starting black
+2025-08-22T05:18:59.657377+00:00 - Starting flake8
+2025-08-22T05:18:59.658413+00:00 - Starting tests
+2025-08-22T05:18:59.658543+00:00 - Running: flake8
+2025-08-22T05:18:59.659640+00:00 - Running: pytest tests/
+2025-08-22T05:18:59.659884+00:00 - Running: black .
+2025-08-22T05:19:00.876088+00:00 - reformatted /app/forensic_engine/summary_utils.py
+
+All done! ✨ 🍰 ✨
+1 file reformatted, 25 files left unchanged.
+
+2025-08-22T05:19:00.876192+00:00 - Finished black
+2025-08-22T05:19:00.991021+00:00 - ./forensic_engine/summary_utils.py:7:1: E302 expected 2 blank lines, found 1
+./forensic_engine/summary_utils.py:11:1: E302 expected 2 blank lines, found 1
+./forensic_engine/summary_utils.py:33:32: E261 at least two spaces before inline comment
+
+2025-08-22T05:19:00.991115+00:00 - Finished flake8
+2025-08-22T05:19:01.152947+00:00 - ============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /app
+collected 17 items
+
+tests/test_analytics.py .                                                [  5%]
+tests/test_batch_processor.py ...                                        [ 23%]
+tests/test_case_router.py ..                                             [ 35%]
+tests/test_file_renamer.py ..                                            [ 47%]
+tests/test_intake_watcher.py ..                                          [ 58%]
+tests/test_meta_tracker.py .                                             [ 64%]
+tests/test_process_file.py .                                             [ 70%]
+tests/test_rename_file_extra.py .                                        [ 76%]
+tests/test_run_batch_processor.py .                                      [ 82%]
+tests/test_utils.py ...                                                  [100%]
+
+============================== 17 passed in 0.25s ==============================
+
+2025-08-22T05:19:01.153064+00:00 - Finished tests
+2025-08-22T05:19:02.302347+00:00 - [{"name": "greenlet", "version": "3.2.3", "latest_version": "3.2.4", "latest_filetype": "wheel"}, {"name": "pip", "version": "25.1.1", "latest_version": "25.2", "latest_filetype": "wheel"}]
+
+[notice] A new release of pip is available: 25.1.1 -> 25.2
+[notice] To update, run: pip install --upgrade pip
+
+2025-08-22T05:19:02.302859+00:00 - Outdated dependencies written to outdated_deps.json
+2025-08-22T05:19:02.302911+00:00 - Finished check_outdated
+2025-08-22T05:19:02.304171+00:00 - Maintenance tasks complete
+2025-08-22T05:20:36.377187+00:00 - Starting check_outdated
+2025-08-22T05:20:36.378578+00:00 - Starting flake8
+2025-08-22T05:20:36.378854+00:00 - Starting black
+2025-08-22T05:20:36.379657+00:00 - Running: flake8
+2025-08-22T05:20:36.379734+00:00 - Running: pip list --outdated --format=json
+2025-08-22T05:20:36.380135+00:00 - Running: black .
+2025-08-22T05:20:36.380895+00:00 - Starting tests
+2025-08-22T05:20:36.383123+00:00 - Running: pytest tests/
+2025-08-22T05:20:36.830100+00:00 - ./forensic_engine/summary_utils.py:35:34: E262 inline comment should start with '# '
+
+2025-08-22T05:20:36.830201+00:00 - Finished flake8
+2025-08-22T05:20:36.849690+00:00 - reformatted /app/forensic_engine/summary_utils.py
+
+All done! ✨ 🍰 ✨
+1 file reformatted, 25 files left unchanged.
+
+2025-08-22T05:20:36.849808+00:00 - Finished black
+2025-08-22T05:20:37.013257+00:00 - ============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /app
+collected 17 items
+
+tests/test_analytics.py .                                                [  5%]
+tests/test_batch_processor.py ...                                        [ 23%]
+tests/test_case_router.py ..                                             [ 35%]
+tests/test_file_renamer.py ..                                            [ 47%]
+tests/test_intake_watcher.py ..                                          [ 58%]
+tests/test_meta_tracker.py .                                             [ 64%]
+tests/test_process_file.py .                                             [ 70%]
+tests/test_rename_file_extra.py .                                        [ 76%]
+tests/test_run_batch_processor.py .                                      [ 82%]
+tests/test_utils.py ...                                                  [100%]
+
+============================== 17 passed in 0.19s ==============================
+
+2025-08-22T05:20:37.013336+00:00 - Finished tests
+2025-08-22T05:20:38.022713+00:00 - [{"name": "greenlet", "version": "3.2.3", "latest_version": "3.2.4", "latest_filetype": "wheel"}, {"name": "pip", "version": "25.1.1", "latest_version": "25.2", "latest_filetype": "wheel"}]
+
+[notice] A new release of pip is available: 25.1.1 -> 25.2
+[notice] To update, run: pip install --upgrade pip
+
+2025-08-22T05:20:38.023178+00:00 - Outdated dependencies written to outdated_deps.json
+2025-08-22T05:20:38.023238+00:00 - Finished check_outdated
+2025-08-22T05:20:38.024326+00:00 - Maintenance tasks complete
