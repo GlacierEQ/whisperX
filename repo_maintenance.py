@@ -6,7 +6,7 @@ import json
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable, Iterable, List
 
@@ -18,7 +18,7 @@ CONFIG_FILE = Path("maintenance_config.json")
 def log(message: str) -> None:
     """Append a timestamped message to the log file."""
     with LOGFILE.open("a", encoding="utf-8") as f:
-        f.write(f"{datetime.utcnow().isoformat()} - {message}\n")
+        f.write(f"{datetime.now(timezone.utc).isoformat()} - {message}\n")
 
 
 def run(command: str) -> subprocess.CompletedProcess:
@@ -38,7 +38,12 @@ def run(command: str) -> subprocess.CompletedProcess:
 def check_outdated() -> None:
     """Check for outdated pip packages and log to JSON file."""
     result = run("pip list --outdated --format=json")
-    data = json.loads(result.stdout) if result.returncode == 0 else []
+    if result.returncode == 0 and result.stdout.strip():
+        # Take only the first line of output, as pip may add notices.
+        json_output = result.stdout.strip().split("\n")[0]
+        data = json.loads(json_output)
+    else:
+        data = []
     OUTDATED_LOG.write_text(json.dumps(data, indent=2), encoding="utf-8")
     log(f"Outdated dependencies written to {OUTDATED_LOG}")
 

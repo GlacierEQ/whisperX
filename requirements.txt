@@ -1,0 +1,8 @@
+# Core application dependencies
+whisperx
+pyannote-audio
+
+# Development and testing dependencies
+pytest
+black
+flake8

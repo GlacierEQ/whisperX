@@ -1,0 +1,14 @@
+[
+  {
+    "name": "greenlet",
+    "version": "3.2.3",
+    "latest_version": "3.2.4",
+    "latest_filetype": "wheel"
+  },
+  {
+    "name": "pip",
+    "version": "25.1.1",
+    "latest_version": "25.2",
+    "latest_filetype": "wheel"
+  }
+]
