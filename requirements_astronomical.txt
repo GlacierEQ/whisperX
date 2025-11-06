@@ -1,0 +1,51 @@
+# GlacierEQ/whisperX - ASTRONOMICAL POWER Requirements
+# Updated: November 6, 2025
+# Performance: 216-418x realtime | Accuracy: 5.63-12% WER
+
+# Core transcription engines
+openai-whisper>=20240930  # Whisper Large V3 Turbo (default)
+faster-whisper>=1.0.0
+transformers>=4.35.0
+torch>=2.1.0
+
+# NVIDIA engines (optional, requires NeMo)
+# nemo_toolkit[asr]>=1.20.0  # For Canary Qwen, Sortformer
+
+# Diarization
+pyannote.audio>=3.1.0
+# picovoice>=2.0.0  # For Falcon (requires SDK license)
+
+# Audio processing
+librosa>=0.10.1
+soundfile>=0.12.1
+pydub>=0.25.1
+numpy>=1.24.0
+
+# Optimization libraries
+flash-attn>=2.3.0  # FlashAttention-2 (optional, significant speedup)
+bitsandbytes>=0.41.0  # Quantization
+accelerate>=0.24.0  # HuggingFace acceleration
+
+# Performance monitoring
+nvidia-ml-py3>=7.352.0  # GPU monitoring
+psutil>=5.9.0
+
+# Async processing
+asyncio
+aiofiles>=23.2.0
+celery[redis]>=5.3.0  # Optional: distributed processing
+
+# API & serving (optional)
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+websockets>=12.0  # For streaming
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+tqdm>=4.66.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-benchmark>=4.0.0
