@@ -13,6 +13,7 @@ This project is a modular, extensible forensic processing pipeline for WhisperX 
 - `case_router.py` — Routes processed files to correct case folders.
 - `analytics.py` — Runs mind mapping, summaries, legal/psych/soc analysis.
 - `utils.py` — Shared utilities.
+- `scanner.py` — High powered directory scanning utilities.
 - `meta/meta_tracker.py` — Meta-tracking logic.
 - `meta/meta-tracker.json` — Meta-tracker log file.
 
@@ -20,3 +21,4 @@ This project is a modular, extensible forensic processing pipeline for WhisperX 
 - Implement each module in order of pipeline flow.
 - Integrate WhisperX and analytics tools.
 - Expand meta-tracking and reporting.
+- Develop unit tests for scanner utilities.
